@@ -112,7 +112,7 @@ app.get("/genre/:bookGenre",async (req,res)=>{
             return res.status(200).json({message:"genre found successfully",bookGenreData:foundGenre})
         }
     } catch(err) {
-        return res.send(500).json({error:"an error occured while getting book genre",genreDetails:err.message})
+        return res.status(500).json({error:"an error occured while getting book genre",genreDetails:err.message})
     }
 })
 
